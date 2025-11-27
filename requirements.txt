@@ -1,29 +1,93 @@
-# PyTorch 深度学习框架
-# 注意：如果使用 CUDA，请从 PyTorch 官网安装对应 CUDA 版本的 PyTorch
-# 例如：pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-torch>=2.0.0
-torchvision>=0.15.0
+# Python 缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
 
-# 图神经网络库
-# torch-geometric 需要与 PyTorch 版本兼容
-# 如果安装失败，请先安装 PyTorch，然后安装 torch-geometric
-torch-geometric>=2.3.0
+# 模型检查点和权重文件（通常很大，不应上传）
+results/*.pth
+results/*.pt
+results/checkpoint_*.pth
+results/model_*.pth
+*.pth
+*.pt
+*.ckpt
 
-# 数值计算和数据处理
-numpy>=1.24.0
+# 训练结果图片（可选，如果不想上传结果图片可以取消注释）
+# results/*.png
+# results/*.jpg
+# results/*.txt
 
-# 图像处理
-opencv-python>=4.8.0
+# 数据集文件（通常很大，不应上传到 GitHub）
+dataset/images/
+dataset/images1/
+dataset/labels/
+dataset/labels1/
+# 如果数据集文件需要版本控制，可以只忽略图片，保留标签文件
+# dataset/images/*.jpg
+# dataset/images1/*.jpg
 
-# 图像处理库（torchvision transforms 可能需要）
-Pillow>=9.5.0
+# macOS 系统文件
+__MACOSX/
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# 数据可视化
-matplotlib>=3.7.0
+# Windows 系统文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# 进度条显示
-tqdm>=4.65.0
+# IDE 和编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
 
-# 类型提示支持（Python < 3.9 需要）
-typing-extensions>=4.5.0; python_version < "3.9"
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv/
+conda-env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# 编译文件
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# 测试覆盖率
+.coverage
+htmlcov/
+.pytest_cache/
+
+# 其他
+*.orig
+*.rej
 
